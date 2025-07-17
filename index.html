@@ -3,14 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple Links</title>
+  <title>Quick Access Links</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      width: 200px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #e6f7ff;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        width: 80%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h2>Links</h2>
-  <ul>
-    <li><a href="https://docs.google.com/document/d/1bve7p9MGJH2-514BpDNLiE0xV61dvrw6PVTZnF-FhKw/edit?pli=1&tab=t.0" target="_blank" rel="noopener noreferrer">Folder</a></li>
-    <li><a href="https://drive.google.com/drive/folders/1wgzAjVXEIjkqSqbuhq1C34dZY-v7vx2f?usp=sharing" target="_blank" rel="noopener noreferrer">Doc</a></li>
-  </ul>
+
+  <h1>Quick Access</h1>
+
+  <div class="card-container">
+    <a class="card" href="https://docs.google.com/document/d/1bve7p9MGJH2-514BpDNLiE0xV61dvrw6PVTZnF-FhKw/edit?pli=1&tab=t.0" target="_blank" rel="noopener noreferrer">📁 Folder</a>
+    <a class="card" href="https://drive.google.com/drive/folders/1wgzAjVXEIjkqSqbuhq1C34dZY-v7vx2f?usp=sharing" target="_blank" rel="noopener noreferrer">📄 Document</a>
+  </div>
+
 </body>
 </html>
 
